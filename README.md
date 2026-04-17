@@ -13,6 +13,9 @@ Your task is to scrape emissions data from the API and use it to calculate the e
 
 You should not spend more than a couple of hours on the task, and if you don't complete all the tasks, then think about how you would solve them.
 
+If you choose to use Elixir, there is some example code for fetching JSON and talking to postgres in the `emissions` folder. You can install Elixir
+using the [Official guide](https://elixir-lang.org/install.html).
+
 
 ## Initial task: Setting up a postgres
 
@@ -55,3 +58,5 @@ Please include instructions on how to run it.
 ## 3. Implement a function to calculate grid emissions for a metering point
 
 Something something
+
+## Elixir 

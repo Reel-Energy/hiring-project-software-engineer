@@ -22,6 +22,7 @@ defmodule Emissions.MixProject do
   defp deps do
     [
       {:postgrex, "~> 0.22.0"},
+      {:req, "~> 0.5.0"},
     ]
   end
 end
