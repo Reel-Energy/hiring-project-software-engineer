@@ -1,33 +1,33 @@
 # Take home assignment
 
+This is the take home assignement for the Senior Software Engineer position at Reel. If you have any questions about the task, feel free to write
+to [Christian Kjær](mailto:ckl@reel.energy).
+
 ## Background
 
 At Reel we do a fair bit of data ingestion and analytics, and for that we often scrape data from APIs and store it in a database. Typically Postgres.
 
-We have included some example data for meter readings.
+We have included some example data for meter readings and SQL scripts to store it. The task is to extend the data model with grid emissions data.
 
 On [Energidataservice](https://www.energidataservice.dk/tso-electricity/DeclarationGridEmission) there is a publically available API endpoint where
-you can 
-
-Your task is to scrape emissions data from the API and use it to calculate the emissions for a metering point.
+you can explore one specific source of emissions data. Your task is to data from the API and use it to calculate the emissions for a metering point.
 
 You should not spend more than a couple of hours on the task, and if you don't complete all the tasks, then think about how you would solve them.
 
 If you choose to use Elixir, there is some example code for fetching JSON and talking to postgres in the `emissions` folder. You can install Elixir
 using the [Official guide](https://elixir-lang.org/install.html).
 
-
 ## Initial task: Setting up a postgres
 
-We have included some initial data 
-
-From inside the `sql` folder we can run stuff
+There are some scripts setting up an initial postgres schema in the `sql` folder. If
+you need a postgres running locally, you can start one easily with Docker:
 
 ```
 $ docker run docker run -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 postgres:latest
 ```
 
-Then if you have PSQL installed, you can seed the database with the initial data.
+Then if you have [PSQL](https://www.tigerdata.com/blog/how-to-install-psql-on-mac-ubuntu-debian-windows)
+installed, you can seed the database with the initial data.
 
 ```
 psql -h localhost -p 5432 -U postgres -f 01_create_tables.sql
@@ -45,18 +45,16 @@ postgres=# select metering_point_id, sum(quantity_kwh) from meter_readings group
  571313113162366344 | 745871.6999999995
 ```
 
-
 ## 1. Design an SQL table for the grid emissions data
 
-Put it in a new file `03_create_grid_emissions_table.sql`
+In the first part of the exercise, you should create a new file `03_create_grid_emissions_table.sql`
+with the relevant `CREATE TABLE...` statement to create a table to store the emissions data.
 
 ## 2. Write a function to scrape the emissions data and store it in the table
 
-There is some boilerplate in Elixir, but feel free to use whatever language you are most comfortable with.
-Please include instructions on how to run it.
+Write code to scrape, parse and store the emissions data in the table that you previously created. You can use the provided Elixir boilerplate,
+or you can use whatever programming language and libraries that you are most comfortable with.
 
 ## 3. Implement a function to calculate grid emissions for a metering point
 
-Something something
-
-## Elixir 
+Write code that takes a metering point id and a time range as arguments, and calculates the grid emissions.
