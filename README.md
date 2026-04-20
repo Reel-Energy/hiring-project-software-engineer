@@ -3,6 +3,10 @@
 This is the take home assignement for the Senior Software Engineer position at Reel. If you have any questions about the task, feel free to write
 to [Christian Kjær](mailto:ckl@reel.energy).
 
+Once you are done, please send the solution to [Christian Kjær](mailto:ckl@reel.energy) as a zip file.
+
+And be aware that we know that Claude Code can solve this assignment correctly.
+
 ## Background
 
 At Reel we do a fair bit of data ingestion and analytics, and for that we often scrape data from APIs and store it in a database. Typically Postgres.
@@ -12,12 +16,12 @@ We have included some example data for meter readings and SQL scripts to store i
 On [Energidataservice](https://www.energidataservice.dk/tso-electricity/DeclarationGridEmission) there is a publically available API endpoint where
 you can explore one specific source of emissions data. Your task is to data from the API and use it to calculate the emissions for a metering point.
 
-You should not spend more than a couple of hours on the task, and if you don't complete all the tasks, then think about how you would solve them.
+You should not spend more than a couple of hours on the task, and if you don't complete all the parts, then think about how you would solve them.
 
 If you choose to use Elixir, there is some example code for fetching JSON and talking to postgres in the `emissions` folder. You can install Elixir
 using the [Official guide](https://elixir-lang.org/install.html).
 
-## Initial task: Setting up a postgres
+## Initial task: Setting up a postgres instance
 
 There are some scripts setting up an initial postgres schema in the `sql` folder. If
 you need a postgres running locally, you can start one easily with Docker:
