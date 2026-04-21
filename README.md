@@ -19,7 +19,7 @@ you can explore one specific source of emissions data. Your task is to data from
 You should not spend more than a couple of hours on the task, and if you don't complete all the parts, then think about how you would solve them.
 
 If you choose to use Elixir, there is some example code for fetching JSON and talking to postgres in the `emissions` folder. You can install Elixir
-using the [Official guide](https://elixir-lang.org/install.html).
+using the [Official guide](https://elixir-lang.org/install.html). Note that the example code is not a great example of production quality Elixir.
 
 ## Initial task: Setting up a postgres instance
 
