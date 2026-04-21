@@ -3,7 +3,8 @@
 This is the take home assignement for the Senior Software Engineer position at Reel. If you have any questions about the task, feel free to write
 to [Christian Kjær](mailto:ckl@reel.energy).
 
-Once you are done, please send the solution to [Christian Kjær](mailto:ckl@reel.energy) as a zip file.
+Once you are done, please send the solution to [Christian Kjær](mailto:ckl@reel.energy) as a zip file together with a short explainer of what you
+did and why.
 
 And be aware that we know that Claude Code can solve this assignment correctly.
 
@@ -18,8 +19,9 @@ you can explore one specific source of emissions data. Your task is to data from
 
 You should not spend more than a couple of hours on the task, and if you don't complete all the parts, then think about how you would solve them.
 
-If you choose to use Elixir, there is some example code for fetching JSON and talking to postgres in the `emissions` folder. You can install Elixir
-using the [Official guide](https://elixir-lang.org/install.html). Note that the example code is not a great example of production quality Elixir.
+You are free to use whatever programming language and libraries that you want, but if you choose to use Elixir, there is some example code for
+fetching JSON and talking to postgres in the `emissions` folder. You can install Elixir using the [Official guide](https://elixir-lang.org/install.html).
+Note that the example code is not a great example of production quality Elixir.
 
 ## Initial task: Setting up a postgres instance
 
