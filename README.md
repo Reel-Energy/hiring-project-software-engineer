@@ -1,6 +1,6 @@
 # Take home assignment
 
-This is the take home assignement for the Senior Software Engineer position at Reel. If you have any questions about the task, feel free to write
+This is the take home assignement for the Software Engineer position at Reel. If you have any questions about the task, feel free to write
 to [Christian Kjær](mailto:ckl@reel.energy).
 
 Once you are done, please send the solution to [Christian Kjær](mailto:ckl@reel.energy) as a zip file together with a short explainer of what you
