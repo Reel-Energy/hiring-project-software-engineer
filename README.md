@@ -39,12 +39,7 @@ an 18-digit id. The meter readings in the data are the production per period for
 
 We have included some example data for meter readings for two metering points, together with
 SQL scripts to store them. The metering points are in different *price areas* (DK1 is western Denmark, DK2 is eastern Denmark),
-and each price area has its own spot price. Each metering point has its own contract price:
-
-| Metering point     | Price area | Contract price |
-|--------------------|------------|----------------|
-| 571313113162366344 | DK1        | 0.60 DKK/kWh   |
-| 571313161170107671 | DK2        | 0.55 DKK/kWh   |
+and each price area has its own spot price. Each metering point has its own contract price, stored in the `metering_points` table.
 
 The spot prices are publicly available on [Energidataservice](https://www.energidataservice.dk), but are split into two separate datasets:
 
