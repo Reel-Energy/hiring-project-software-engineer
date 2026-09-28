@@ -18,12 +18,14 @@ market price (also called the *spot price*), and for every period we calculate t
 and the agreed price (the *contract price*):
 
 ```
-adjustment_dkk = (spot_price - contract_price) * quantity
+adjustment = (spot_price - contract_price) * quantity
 ```
 
 If the spot price is above the contract price the producer pays us the difference. If the spot price is below the contract
 price we pay the producer the difference (a negative adjustment). Either way the producer ends up
-with the contract price for every kWh they produced. As an example, if a solar park produced 2000 kWh in an hour where the
+with the contract price for every kWh they produced. 
+
+As an example, if a solar park produced 2000 kWh in an hour where the
 spot price is 0.72 DKK/kWh and the contract price is 0.60 DKK/kWh, the adjustment for that hour is `(0.72 - 0.60) * 2000 = 240 DKK`,
 which the producer pays us. In an hour where the spot price is 0.42 DKK/kWh the adjustment is `(0.42 - 0.60) * 2000 = -360 DKK`,
 which we pay the producer.
@@ -81,13 +83,11 @@ And then you can query the usual way
 
 ```
 psql -h localhost -p 5432 -U postgres
-postgres=# select metering_point_id, resolution, round(sum(quantity_kwh)::numeric, 3) from meter_readings group by 1, 2 order by 1, 2;
- metering_point_id  | resolution |   round
---------------------+------------+------------
- 571313113162366344 | PT15M      | 311205.600
- 571313113162366344 | PT1H       | 428120.200
- 571313161170107671 | PT15M      |    322.730
- 571313161170107671 | PT1H       |    384.260
+postgres=# select metering_point_id, sum(quantity_kwh) from meter_readings group by metering_point_id;
+ metering_point_id  |        sum
+--------------------+-------------------
+ 571313161170107671 | 706.9899999999825
+ 571313113162366344 | 739325.8000000002
 ```
 
 ## 1. Design an SQL table for the spot prices
