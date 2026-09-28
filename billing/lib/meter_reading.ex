@@ -15,10 +15,9 @@ defmodule MeterReading do
         ) :: [meter_reading()]
   @doc """
     Example code for reading some rows from Postgres. You get the connection
-    from calling `Emissions.db_connection!/0`
+    from calling `Billing.db_connection!/0`
   """
   def get_in_period(conn, metering_point_id, from, to) do
-
     Postgrex.query!(
       conn,
       "SELECT metering_point_id, time, resolution, quantity_kwh FROM meter_readings WHERE metering_point_id = $1 AND time >= $2 AND time < $3",

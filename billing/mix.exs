@@ -1,9 +1,9 @@
-defmodule Emissions.MixProject do
+defmodule Billing.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :emissions,
+      app: :billing,
       version: "0.1.0",
       elixir: "~> 1.19",
       start_permanent: Mix.env() == :prod,
@@ -22,7 +22,7 @@ defmodule Emissions.MixProject do
   defp deps do
     [
       {:postgrex, "~> 0.22.0"},
-      {:req, "~> 0.5.0"},
+      {:req, "~> 0.5.0"}
     ]
   end
 end

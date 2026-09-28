@@ -1,6 +1,6 @@
-defmodule Emissions do
+defmodule Billing do
   @moduledoc """
-  Documentation for `Emissions`.
+  Documentation for `Billing`.
   """
 
   @doc """
@@ -8,7 +8,7 @@ defmodule Emissions do
 
   ## Examples
 
-      iex> Emissions.hello()
+      iex> Billing.hello()
       :world
 
   """
