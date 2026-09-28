@@ -4,8 +4,7 @@ This is the take home assignment for the Senior Software Engineer, Energy Billin
 to [Christian Kjær](mailto:ckl@reel.energy).
 
 Once you are done, please send the solution to [Christian Kjær](mailto:ckl@reel.energy) as a zip file together with a short explainer of what you
-did and why. We are at least as interested in the decisions you made along the way as in the code itself, so please write down
-the places where the task left something open and what you chose to do about it.
+did and why.
 
 You are free to use AI tools for solving the assignment.
 
@@ -51,7 +50,7 @@ The spot prices are publicly available on [Energidataservice](https://www.energi
 - [Day-Ahead Prices](https://www.energidataservice.dk/tso-electricity/DayAheadPrices) has 15 minute prices from October 1st 2025.
 
 Both are served from the same API (`https://api.energidataservice.dk/dataset/<DatasetName>`), see the
-[API guide](https://www.energidataservice.dk/guides/api-guides). The API is rate limited, so fetch the data in as few requests as possible.
+[API guide](https://www.energidataservice.dk/guides/api-guides).
 
 Your task is to extend the data model with the spot prices and calculate the monthly adjustment totals.
 
