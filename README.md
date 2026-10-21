@@ -3,7 +3,7 @@
 This is the take home assignement for the Software Engineer position at Reel. If you have any questions about the task, feel free to write
 to [Denis Drobny](mailto:dd@reel.energy).
 
-Once you are done, please send the solution to [Denis Drobny](mailto:dd@reel.energy as a zip file together with a short explainer of what you
+Once you are done, please send the solution to [Denis Drobny](mailto:dd@reel.energy) as a zip file together with a short explainer of what you
 did and why.
 
 And be aware that we know that Claude Code can solve this assignment correctly.
